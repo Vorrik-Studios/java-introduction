@@ -1,1 +1,0 @@
-## This part of the introduction has alot of comments as i use it to explain ALOT of information
