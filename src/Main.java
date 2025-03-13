@@ -1,44 +1,72 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* INTEGERS & MATH */
+        /* BOOLEANS & LOGIC */
 
-        int a = 100;
-        int b = 200;
+        // Booleans are either true (1) or false (0)
+        boolean learning = true;
+        boolean learningSucks = false;
+        System.out.println("Learning is so fun " + !learningSucks); // Prints Learning is so fun and the opposite of the learningSucks variable
+        System.out.println("Learning right now " + learning);
 
-        // ADDITION
-        int sum = a + b;
-        System.out.println("Sum of " + a + " and " + b + " is: " + sum); // Printing the sum of the two numbers (a and b)
+        // COMPARISONS (<, <=, >=, >, ==, !=)
+        // Operators in order: less than, less than or equal to, greater than or equal to, greater than, equal to, not equal to
 
-        // SUBTRACTION
-        int dif = a - b;
-        System.out.println("Difference of " + a + " and " + b + " is: " + dif); // Printing the difference of the two numbers (a and b)
+        int points = 76;
+        int pointsToPass = 55;
+        boolean hasPassedTest = points >= pointsToPass;
+        System.out.println("Has passed the Test? " + hasPassedTest);
 
-        // MULTIPLICATION
-        int product = a * b;
-        System.out.println("Product of " + a + " and " + b + " is: " + product); // Printing the product of the two numbers (a and b)
+        int health = 0;
+        boolean isAlive = health > 0;
+        System.out.println("Still alive? " + isAlive);
 
-        // DIVISION
-        int Quotient = a / b; // Is 0 because an integer is only a whole number
-        System.out.println("Quotient of " + a + " and " + b + " is: " + Quotient); // Printing the quotient of the two numbers (a and b)
-        Quotient = b / a;
-        System.out.println("Quotient of " + b + " and " + a + " is: " + Quotient); // Printing the quotient of the two numbers (a and b)
+        boolean example = 100 == 100; // true
+        example = 100 != 100; // false
+        example = 100 < 100; // false
+        example = 100 > 100; // false
+        example = 100 <= 100; // true
+        example = 100 >= 100; // true
 
-        // REMAINDER (MODULUS)
-        int remainder = 100 % 2; // Can be used to figure out if a variable (number) is even or odd
-        System.out.println("Remainder from 100/2 " + remainder);
+        // LOGIC (AND, OR, NOT)
 
-        remainder = 100 % 3;
-        System.out.println("Remainder from 100/3 " + remainder);
+        /*
+        * OR
+        * In1 | In2 | Result
+        *  0  |  0  |   0
+        *  1  |  0  |   1
+        *  0  |  1  |   1
+        *  1  |  1  |   1
+        *
+        * AND
+        * In1 | In2 | Result
+        *  0  |  0  |   0
+        *  1  |  0  |   0
+        *  0  |  1  |   0
+        *  1  |  1  |   1
+        *
+        * NOT
+        *  In | !In    NOTE: ! is the opposite of something
+        *  0  |  1
+        *  1  |  0
+        * */
 
-        remainder = 100 % 4;
-        System.out.println("Remainder from 100/4 " + remainder);
+        boolean passedTest1 = true;
+        boolean passedTest2 = true;
+        boolean hasHonors = passedTest1 && passedTest2; // && is the AND operator  true if both are true
 
-        // MATH METHODS
-        System.out.println("Ceiling of: 1.23: " + Math.ceil(1.23)); // Round up
-        System.out.println("Round of: 1.23: " + Math.round(1.23)); // Rounding
-        System.out.println("Floor of: 1.23: " + Math.floor(1.23)); // Rounding down
-        System.out.println("Absolute of: -100: " + Math.abs(-100)); // Absolute value
-        System.out.println("Minimum of: 10 and 200 : " + Math.min(10, 200)); // Minimum
-        System.out.println("Maximum of: 10 and 200 : " + Math.max(37, 750)); // Maximum
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your age?");
+        int age = scanner.nextInt();
+        System.out.println("Put in true or false, are you from America?");
+        boolean isEuropean = scanner.nextBoolean();
+
+        int usDrinkingAge = 21;
+        int euDrinkingAge = 18;
+
+        boolean canDrink = !isEuropean && age >= euDrinkingAge || isEuropean && age >= usDrinkingAge;
+        System.out.println("Can you drink? " + canDrink);
+
     }
 }
