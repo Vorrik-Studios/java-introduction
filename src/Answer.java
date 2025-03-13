@@ -36,6 +36,16 @@ public class Answer {
                     result = "ERROR: Invalid operation: " + operation;
                     break;
             }
+
+            /* another way you could write this switch statement is
+             * String result = switch (operation) {
+             *  case "plus", "+" -> "Result: " + (num1 + num2);
+             *  case "minus", "-" -> "Result: " + (num1 - num2);
+             *  case "divide", "/" -> "Result: " + (num1 / num2);
+             *  case "multiply", "*" -> "Result: " + (num1 * num2);
+             *  default -> "ERROR: Invalid operation: " + operation;
+             * };
+             */
             System.out.println("Calculating " + num1 + " " + operation + " " + num2);
             System.out.println(result);
 
