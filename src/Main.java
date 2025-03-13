@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Main {
     public static void main(String[] args) {
         /* ARRAYS */
@@ -30,7 +32,8 @@ public class Main {
         answers[1] = "Pacific Ocean";
         answers[2] = "1990";
 
-        for (int i = 0; i < 3; i++) {
+        // Using Array.getLength(questions) to loop through every one of them every time even if you change the size of the array
+        for (int i = 0; i < Array.getLength(questions); i++) {
             System.out.println("Q: " + questions[i] + " | A: " + answers[i]); // Much better this works unlike the other for loop
         }
     }
