@@ -2,71 +2,36 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* BOOLEANS & LOGIC */
+        /* ASSIGNMENT OPERATORS */
 
-        // Booleans are either true (1) or false (0)
-        boolean learning = true;
-        boolean learningSucks = false;
-        System.out.println("Learning is so fun " + !learningSucks); // Prints Learning is so fun and the opposite of the learningSucks variable
-        System.out.println("Learning right now " + learning);
+        // Assignment =
+        int mana = 100;
+        System.out.println("Mana: " + mana);
 
-        // COMPARISONS (<, <=, >=, >, ==, !=)
-        // Operators in order: less than, less than or equal to, greater than or equal to, greater than, equal to, not equal to
+        // Addition +=
+        mana += 20; // mana = mana + 20
+        System.out.println(mana);
 
-        int points = 76;
-        int pointsToPass = 55;
-        boolean hasPassedTest = points >= pointsToPass;
-        System.out.println("Has passed the Test? " + hasPassedTest);
+        mana++; // mana += 1
+        System.out.println(mana);
 
-        int health = 0;
-        boolean isAlive = health > 0;
-        System.out.println("Still alive? " + isAlive);
+        // Subtraction -=
+        mana -= 20; // mana = mana - 20
+        System.out.println(mana);
 
-        boolean example = 100 == 100; // true
-        example = 100 != 100; // false
-        example = 100 < 100; // false
-        example = 100 > 100; // false
-        example = 100 <= 100; // true
-        example = 100 >= 100; // true
+        mana--; // mana -= 1
+        System.out.println(mana);
 
-        // LOGIC (AND, OR, NOT)
+        // Multiplication *=
+        mana *= 2;
+        System.out.println(mana);
 
-        /*
-        * OR
-        * In1 | In2 | Result
-        *  0  |  0  |   0
-        *  1  |  0  |   1
-        *  0  |  1  |   1
-        *  1  |  1  |   1
-        *
-        * AND
-        * In1 | In2 | Result
-        *  0  |  0  |   0
-        *  1  |  0  |   0
-        *  0  |  1  |   0
-        *  1  |  1  |   1
-        *
-        * NOT
-        *  In | !In    NOTE: ! is the opposite of something
-        *  0  |  1
-        *  1  |  0
-        * */
+        // Division /=
+        mana /= 4;
+        System.out.println(mana);
 
-        boolean passedTest1 = true;
-        boolean passedTest2 = true;
-        boolean hasHonors = passedTest1 && passedTest2; // && is the AND operator  true if both are true
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your age?");
-        int age = scanner.nextInt();
-        System.out.println("Put in true or false, are you from America?");
-        boolean isEuropean = scanner.nextBoolean();
-
-        int usDrinkingAge = 21;
-        int euDrinkingAge = 18;
-
-        boolean canDrink = !isEuropean && age >= euDrinkingAge || isEuropean && age >= usDrinkingAge;
-        System.out.println("Can you drink? " + canDrink);
-
+        // Modulus (Remainder) %=
+        mana %= 2;
+        System.out.println(mana);
     }
 }
