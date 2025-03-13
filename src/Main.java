@@ -2,55 +2,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* LOOPS (FOR & WHILE) */
+        /* EXERCISE 1: Simple Calculator
+        *
+        * Create a Calculator that runs multiple times until you manually break out of it.
+        * You should read the operation first, then read the first and second number.
+        *
+        * Depending on the operation chosen, you then have to return a different result.
+        * You can do this with if statements or switch statements.
+        *
+        * Please note that when reading a String, you want to use scanner.next()
+        * And when comparing strings you want to use:
+        * String s = "something";
+        * s.equals("something");
+        * and not ==
+        *
+        * After the result has be output, ask the user if they want to continue, if not end the program!
+        * Estimated Time: 30-45 minutes
+        * */
 
-        // FOR
-
-        // Outputs every number from 0 to 100
-        for (int i = 0; i <= 100; i++) {
-            System.out.println(i);
-        }
-
-        System.out.println(" ");
-        System.out.println("-----");
-        System.out.println(" ");
-
-        // Outputs every even number from 0 to 100
-        for (int i = 0; i <= 100; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
-        }
-
-        System.out.println(" ");
-        System.out.println("-----");
-        System.out.println(" ");
-
-        // Outputs every leap year from 1000 to 2000
-        for (int i = 1000; i <= 2000; i++) {
-            if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)) {
-                System.out.println(i);
-            }
-        }
-
-
-        // WHILE
-        // Be careful with this one as it can enter an infinite loop if not handled correctly
-
-        int health = 10;
-        while (health > 0) {
-            health--;
-
-            if (health == 6) {
-                continue; // Continues the loop without doing anything more
-            }
-
-            if (health == 2) {
-                break; // Stops the loop
-            }
-
-            System.out.println("Player still alive with: " + health + " HP");
-        }
-        System.out.println("Player Died");
     }
 }
