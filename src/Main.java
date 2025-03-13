@@ -1,40 +1,33 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* DATA TYPES & VARIABLES */
+        /* INPUT & OUTPUT */
 
-        // Hello I am a comment
-        /*
-         * And I am a multiline comment!
-         * I can come in handy for explaining stuff
-         */
+        /* OUTPUT */
+        // Outputting a string
+        System.out.println("Hello, this is outputting a string to the terminal in Java.");
 
-        /* Variables */
+        // Outputting an integer
+        int outputThis = 42;
+        System.out.println(outputThis); // Outputs the value of outputThis which in this case is an integer of 42
 
-        // datatype name_of_variable; // Declaration
-        // OR
-        // datatype name_of_variable = value_of_variable; // Initialization (Declaration + Assignment of Value)
+        // Output with string and integer
+        int grade = 80;
+        System.out.println("Your grade is " + grade); // Outputs Your grade is 80
 
-        /* DATA TYPES */
+        /* INPUT */
+        // Create a new Scanner
+        Scanner scanner = new Scanner(System.in);
+        // Use the scanner to get the next thing the user types
+        int number = scanner.nextInt(); // Try typing a string what do you notice?
+        // Output what the user types
+        System.out.println("You just typed " + number);
 
-        // Integers (Store whole numbers (including negative ones))
-        // Goes from -2147483648 to 2147483648
-        int points;
-        points = 100;
-        int x = -42;
-
-        // Floating Point Numbers (float & double)
-        float pi = 3.14159265f;
-        double e = 2.718281828;
-
-        // For real numbers, however! Precision can be an issue!
-        // Scientific notation: 314159265 * 10^-8
-
-        // Boleans (True or False)
-        boolean learningIsFun = true;
-        boolean CSSIsFun = false;
-
-        // Chars & Strings
-        char grade = 'A';
-        String name = "VorrikZ";
+        // If you want to be able to take in any data from the scanner and NOT error then
+        scanner.nextLine(); // So that both the number scanner and this one can run
+        String input = scanner.nextLine();
+        // Output the input
+        System.out.println("You now just typed " + input);
     }
 }
