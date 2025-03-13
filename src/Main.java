@@ -2,36 +2,50 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* ASSIGNMENT OPERATORS */
+        /* CONTROL FLOW (IF & SWITCH) */
 
-        // Assignment =
-        int mana = 100;
-        System.out.println("Mana: " + mana);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How much Health do you have?");
+        int health = scanner.nextInt();
+        boolean isAlive = health > 0;
 
-        // Addition +=
-        mana += 20; // mana = mana + 20
-        System.out.println(mana);
+        if (isAlive) {
+            System.out.println("You are still alive!");
+        } else {
+            System.out.println("You have died!");
+        }
 
-        mana++; // mana += 1
-        System.out.println(mana);
+        System.out.println("How many points do you have?");
+        int points = scanner.nextInt();
 
-        // Subtraction -=
-        mana -= 20; // mana = mana - 20
-        System.out.println(mana);
+        if (points >= 100) {
+            System.out.println("You passed with an A+");
+        } else if (points >= 50) {
+            System.out.println("You passed");
+        }
+        else {
+            System.out.println("You failed!");
+        }
 
-        mana--; // mana -= 1
-        System.out.println(mana);
+        // SWITCH
 
-        // Multiplication *=
-        mana *= 2;
-        System.out.println(mana);
-
-        // Division /=
-        mana /= 4;
-        System.out.println(mana);
-
-        // Modulus (Remainder) %=
-        mana %= 2;
-        System.out.println(mana);
+        int x = 3;
+        switch (x) {
+            case 0:
+                System.out.println("X is 0");
+                break;
+            case 1:
+                System.out.println("X is 1");
+                break;
+            case 2:
+                System.out.println("X is 2");
+                break;
+            case 3:
+                System.out.println("X is 3");
+                break;
+            default:
+                System.out.println("X is unknown");
+                break;
+        }
     }
 }
