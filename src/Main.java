@@ -2,50 +2,55 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* CONTROL FLOW (IF & SWITCH) */
+        /* LOOPS (FOR & WHILE) */
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How much Health do you have?");
-        int health = scanner.nextInt();
-        boolean isAlive = health > 0;
+        // FOR
 
-        if (isAlive) {
-            System.out.println("You are still alive!");
-        } else {
-            System.out.println("You have died!");
+        // Outputs every number from 0 to 100
+        for (int i = 0; i <= 100; i++) {
+            System.out.println(i);
         }
 
-        System.out.println("How many points do you have?");
-        int points = scanner.nextInt();
+        System.out.println(" ");
+        System.out.println("-----");
+        System.out.println(" ");
 
-        if (points >= 100) {
-            System.out.println("You passed with an A+");
-        } else if (points >= 50) {
-            System.out.println("You passed");
-        }
-        else {
-            System.out.println("You failed!");
+        // Outputs every even number from 0 to 100
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
         }
 
-        // SWITCH
+        System.out.println(" ");
+        System.out.println("-----");
+        System.out.println(" ");
 
-        int x = 3;
-        switch (x) {
-            case 0:
-                System.out.println("X is 0");
-                break;
-            case 1:
-                System.out.println("X is 1");
-                break;
-            case 2:
-                System.out.println("X is 2");
-                break;
-            case 3:
-                System.out.println("X is 3");
-                break;
-            default:
-                System.out.println("X is unknown");
-                break;
+        // Outputs every leap year from 1000 to 2000
+        for (int i = 1000; i <= 2000; i++) {
+            if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)) {
+                System.out.println(i);
+            }
         }
+
+
+        // WHILE
+        // Be careful with this one as it can enter an infinite loop if not handled correctly
+
+        int health = 10;
+        while (health > 0) {
+            health--;
+
+            if (health == 6) {
+                continue; // Continues the loop without doing anything more
+            }
+
+            if (health == 2) {
+                break; // Stops the loop
+            }
+
+            System.out.println("Player still alive with: " + health + " HP");
+        }
+        System.out.println("Player Died");
     }
 }
