@@ -32,8 +32,8 @@ public class Main {
         answers[1] = "Pacific Ocean";
         answers[2] = "1990";
 
-        // Using Array.getLength(questions) to loop through every one of them every time even if you change the size of the array
-        for (int i = 0; i < Array.getLength(questions); i++) {
+        // Using questions.length() to loop through every one of them every time even if you change the size of the array
+        for (int i = 0; i < questions.length; i++) {
             System.out.println("Q: " + questions[i] + " | A: " + answers[i]); // Much better this works unlike the other for loop
         }
     }
