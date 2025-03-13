@@ -36,5 +36,11 @@ public class Main {
         for (int i = 0; i < questions.length; i++) {
             System.out.println("Q: " + questions[i] + " | A: " + answers[i]); // Much better this works unlike the other for loop
         }
+
+        // Another way we could display the questions is
+        // Reads as: for each string question in questions do
+        for (String question : questions) {
+            System.out.println(question);
+        }
     }
 }
