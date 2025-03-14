@@ -1,13 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        /* EXERCISE 3 - Calculator with Classes
-         *
-         * Create the same Calculator application that we had before!
-         *
-         * This time however, make classes for each operation. Make a custom Interface that all of them implement!
-         * Also make a Calculator class which deals with the calculation itself.
-         *
-         *
-         */
+        /* Enums & Advanced Enums */
+
+        Difficulty gameDifficulty = Difficulty.MEDIUM;
+        System.out.println("Difficulty is " + gameDifficulty);
+
+        ToolMaterial myAxeMaterial = ToolMaterial.STONE;
+        ToolMaterial myShovelMaterial = ToolMaterial.IRON;
+
+        System.out.println("My axe has " + myAxeMaterial.getDurability() + " durability");
+        System.out.println("My shovel has " + myShovelMaterial.getMiningSpeed() + " mining speed");
     }
 }
