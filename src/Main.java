@@ -1,34 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         /* OBJECT ORIENTED PROGRAMMING (OOP)
         * Take a look at this PowerPoint: https://1drv.ms/p/c/1ac3dee98978c804/ERr8WXvEONtOrsE_vFtG5okB8x3nJccACL-shwzMViXEBg?e=p6YzdD
         */
 
-        /* INHERITANCE & POLYMORPHISM */
-        Dog bengie = new Dog("bengie.png", "Bengie", 9);
-        Dog jeremy = new Dog("jeremy.png", "Jeremy", 7);
-        Cat sigma =  new Cat("sigma.png", "Sigma", 2);
+        /* INTERFACE & ABSTRACTION */
+        Animal bengie = new Dog("bengie.png", "Bengie", 9);
+        Animal jeremy = new Dog("jeremy.png", "Jeremy", 7);
 
-        bengie.displayInfo();
-        jeremy.displayInfo();
-        sigma.displayInfo();
+        Animal sigma =  new Cat("sigma.png", "Sigma", 2);
 
-        bengie.birthday();
+        Bird jules = new Bird("jules.png", "Jules", 1);
 
-        bengie.displayInfo();
-        jeremy.displayInfo();
-        sigma.displayInfo();
+        jules.move();
+        jules.makeSound();
+        // You can't do jules.fly if you say in the declaration jules is an Animal so we have to cast it to the Bird class
+        // You could also just say jules is a Bird instead of Animal when declaring
+        // ((Bird) jules).fly();
+        jules.fly();
 
-        bengie.birthday();
-        jeremy.birthday();
-        sigma.birthday();
+        List<Animal> animals = new ArrayList<>();
+        animals.add(bengie);
+        animals.add(jeremy);
+        animals.add(sigma);
+        animals.add(jules);
 
-        bengie.displayInfo();
-        jeremy.displayInfo();
-        sigma.displayInfo();
+        List<IFlyable> flyables = new ArrayList<>();
+        flyables.add(jules);
+        flyables.add(new Airplane());
 
-        bengie.makeSound();
-        jeremy.makeSound();
-        sigma.makeSound();
+        for(Animal animal : animals) {
+            animal.move();
+            animal.makeSound();
+        }
+
+        for (IFlyable flyable : flyables) {
+            flyable.fly();
+        }
     }
 }

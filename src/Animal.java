@@ -1,4 +1,5 @@
-public class Animal {
+// abstract makes it only work with subclasses / inheritance
+public abstract class Animal {
     private String picture;
     public String name;
     private int age;
@@ -8,6 +9,8 @@ public class Animal {
         this.name = name;
         this.age = age;
     }
+
+    public abstract void move();
 
     public void makeSound() {
         System.out.println("Whatever Animal Sound");
